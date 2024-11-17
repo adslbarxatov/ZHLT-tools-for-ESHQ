@@ -9,42 +9,48 @@ using namespace std;
 
 set<string> g_invisible_items;
 
-void properties_initialize(const char* filename)
-{
-    if (filename == NULL)
-    { return; }
+void properties_initialize (const char *filename)
+	{
+	if (filename == NULL)
+		{
+		return;
+		}
 
-    if (q_exists(filename))
-    { Log("Loading null entity list from '%s'\n", filename); }
-    else
-    {
-		Error("Could not find null entity list file '%s'\n", filename);
-        return;
-    }
+	if (q_exists (filename))
+		{
+		Log ("Loading null entity list from '%s'\n", filename);
+		}
+	else
+		{
+		Error ("Could not find null entity list file '%s'\n", filename);
+		return;
+		}
 
-	ifstream file(filename,ios::in);
-	if(!file)
-	{ 
-		file.close();
-		return; 
-	}
+	ifstream file (filename, ios::in);
+	if (!file)
+		{
+		file.close ();
+		return;
+		}
 
 
 	//begin reading list of items
 	char line[ZHLT3_MAX_VALUE];
-	memset(line,0,sizeof(char)*4096);
+	memset (line, 0, sizeof (char) * 4096);
 	int numitems = 0;
-	char* str = NULL;
-	char** list = NULL;
-	while(!file.eof())
-	{
+	char *str = NULL;
+	char **list = NULL;
+	while (!file.eof ())
+		{
 		string str;
-		getline(file,str);
-		if(str.size() < 1)
-		{ continue; }
-		g_invisible_items.insert(str);
+		getline (file, str);
+		if (str.size () < 1)
+			{
+			continue;
+			}
+		g_invisible_items.insert (str);
+		}
+	file.close ();
 	}
-	file.close();
-}
 
 #endif

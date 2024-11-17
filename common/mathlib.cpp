@@ -1,9 +1,9 @@
-#include "cmdlib.h"
-#include "messages.h"
-#include "log.h"
-#include "hlassert.h"
-#include "mathtypes.h"
-#include "mathlib.h"
-#include "win32fix.h"
+#include "..\common\cmdlib.h"
+#include "..\common\messages.h"
+#include "..\common\log.h"
+#include "..\common\hlassert.h"
+#include "..\common\mathtypes.h"
+#include "..\common\mathlib.h"
+#include "..\common\win32fix.h"
 
-const vec3_t    vec3_origin = { 0, 0, 0 };
+const vec3_t vec3_origin = { 0, 0, 0 };
