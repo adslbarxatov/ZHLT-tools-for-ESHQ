@@ -136,9 +136,7 @@ static wedge_t *FindEdge (const vec3_t p1, const vec3_t p2, vec_t *t1, vec_t *t2
 	VectorSubtract (p2, p1, dir);
 	if (!CanonicalVector (dir))
 		{
-		/*if _ DEBUG*/
 		Warning ("CanonicalVector: degenerate @ (%4.3f %4.3f %4.3f)\n", p1[0], p1[1], p1[2]);
-		/*endif*/
 		}
 
 	*t1 = DotProduct (p1, dir);
@@ -286,12 +284,9 @@ static void SplitFaceForTjunc (face_t *f, face_t *original)
 	vec3_t	dir, test;
 	vec_t	v;
 	int		firstcorner, lastcorner;
-
-	/*ifdef _ DEBUG*/
 	static int	counter = 0;
 
 	Log ("SplitFaceForTjunc %d\n", counter++);
-	/*endif*/
 
 	chain = NULL;
 	do

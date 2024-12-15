@@ -190,20 +190,10 @@ bool TEX_InitFromWad ()
 
 
 #ifdef HLCSG_AUTOWAD
-		/*
-		ifdef _ DEBUG
-		Log ("[dbg] Attempting to parse wad: '%s'\n", pszWadFile);
-		endif
-		*/
 
 		if (g_bWadAutoDetect && !currentwad->usedtextures)
 			continue;
 
-		/*
-		ifdef _ DEBUG
-		Log ("[dbg] Parsing wad\n");
-		endif
-		*/
 #endif
 
 		texfiles[nTexFiles] = fopen (pszWadFile, "rb");

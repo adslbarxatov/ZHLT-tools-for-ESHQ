@@ -10,8 +10,8 @@
 
 #define B_API(t)	extern "C" __declspec(dllexport) t
 
-#define B_VERSION			6,0,0,0
-#define B_VERSION_S			"6.0.0.0"
+#define B_VERSION			6,0,2,0
+#define B_VERSION_S			"6.0.2.0"
 #define B_PRODUCT			"ZHLT tools adaptation for ESHQ"
 #define B_COMPANY			FDL_COMPANY
 
@@ -42,4 +42,4 @@ B_API(sint) BuildMapEx (const char *MapPath, uchar Step);
 
 B_API(char *) LibVersionEx ();
 B_API(uint) StepsCountEx ();
-B_API(char *) BannerEx ();
+B_API(char *) BannerTextEx ();

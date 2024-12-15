@@ -239,12 +239,6 @@ void LoadWadConfigFile ()
 		ExtractFilePath (tmp, appdir);
 		safe_snprintf (tmp, _MAX_PATH, "%s%s", appdir, WAD_CONFIG_FILE);
 
-		/*
-		ifdef _ DEBUG
-		Log ("[dbg] Trying '%s'\n", tmp);
-		endif
-		*/
-
 		if (!q_exists (tmp))
 			{
 			// try the Half-Life directory
@@ -269,12 +263,6 @@ void LoadWadConfigFile ()
 					// system slash pointless as this will only work on win32, but anyway...
 
 					safe_strncat (tmp, WAD_CONFIG_FILE, _MAX_PATH);
-
-					/*
-					ifdef _ DEBUG
-					Log ("[dbg] Trying '%s'\n", tmp);
-					endif
-					*/
 
 					if (!q_exists (tmp))
 #endif

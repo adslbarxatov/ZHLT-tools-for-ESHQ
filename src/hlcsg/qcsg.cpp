@@ -1910,11 +1910,8 @@ int MakeCSG (const char *Map, unsigned __int8 Mode)
 	ResetLog ();
 
 	OpenLog (g_clientid);
-	/*atexit (CloseLog);*/
-
 	LogStart (0, NULL);
 
-	/*atexit (CSGCleanup); // AJM*/
 	dtexdata_init ();
 	atexit (dtexdata_free);
 

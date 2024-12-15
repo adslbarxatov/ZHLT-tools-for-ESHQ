@@ -100,9 +100,7 @@ void autowad_PushName (const char *const texname)
 		g_autowad_texname = tex;
 		g_numUsedTextures++;
 
-		/*ifdef _ DEBUG*/
 		Log ("[dbg] Used texture: %i[%s]\n", g_numUsedTextures, texname);
-		/*endif*/
 		
 		return;
 		}
@@ -126,9 +124,7 @@ void autowad_PushName (const char *const texname)
 	tex->next = NULL;
 	last->next = tex;
 
-	/*ifdef _ DEBUG*/
 	Log ("[dbg] Used texture: %i[%s]\n", g_numUsedTextures, texname);
-	/*endif*/
 	}
 
 // =====================================================================================
@@ -304,24 +300,12 @@ void autowad_UpdateUsedWads ()
 	int			i, j;
 	int			nTexLumps = 0;
 
-	/*
-	ifdef _ DEBUG
-	Log ("[dbg] Starting wad dependency check\n");
-	endif
-	*/
-
 	// open each wadpath and sort though its contents
 	for (i = 0; i < g_iNumWadPaths; i++)
 		{
 		currentwad = g_pWadPaths[i];
 		pszWadFile = currentwad->path;
 		currentwad->usedbymap = false;	// guilty until proven innocent
-
-		/*
-		ifdef _ DEBUG
-		Log (" Parsing wad: '%s'\n", pszWadFile);
-		endif
-		*/
 
 		texfile = fopen (pszWadFile, "rb");
 
@@ -383,22 +367,11 @@ void autowad_UpdateUsedWads ()
 			{
 			if (stristr (pszWadFile, it->c_str ()))
 				{
-				/*
-				ifdef _ DEBUG
-				Log ("  - including wad\n");
-				endif
-				*/
-
 				including = true;
 				currentwad->usedbymap = true;
 				break;
 				}
 			}
-		/*if (including)
-			{
-			//fclose(texfile);
-			//continue;
-			}*/
 		}
 
 		// read in this wadfiles information
@@ -438,9 +411,7 @@ void autowad_UpdateUsedWads ()
 				currentwad->usedbymap = true;
 				currentwad->usedtextures++;
 
-				/*ifdef _ DEBUG*/
 				Log ("    - Used wadfile: [%s]\n", thislump[nTexLumps].name);
-				/*endif*/
 				autowad_PurgeName (thislump[nTexLumps].name);
 				}
 			}
@@ -448,11 +419,6 @@ void autowad_UpdateUsedWads ()
 		fclose (texfile);
 		}
 
-	/*
-	ifdef _ DEBUG
-	Log ("[dbg] End wad dependency check\n\n");
-	endif
-	*/
 	return;
 	}
 

@@ -40,13 +40,6 @@ int main (int argc, char **argv)
 	if (strstr (path, "esrm") != NULL)
 		esrm = 1;
 
-	/*// TEST //
-	MakeCSG (path, esrm);
-	MakeBSP (path, esrm);
-	MakeVIS (path, esrm);
-	MakeRAD (path, esrm);
-	//      //*/
-
 	// Запуск
 #if AS_DLL
 	switch (Step + 0x30)
@@ -86,7 +79,7 @@ B_API(uint) StepsCountEx ()
 
 #include "common\log.h"
 
-B_API (char *) BannerEx ()
+B_API (char *) BannerTextEx ()
 	{
 	return GetBanner ();
 	}

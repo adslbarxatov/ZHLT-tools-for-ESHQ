@@ -35,12 +35,6 @@ void PushWadPath (const char *const path, bool inuse)
 	current->usedtextures = 0;		// should be updated later in autowad procedures
 
 	g_pWadPaths[g_iNumWadPaths++] = current;
-
-	/*
-	ifdef _ DEBUG
-	Log ("[dbg] PushWadPath: %i[%s]\n", g_iNumWadPaths, path);
-	endif
-	*/
 	}
 
 // =====================================================================================

@@ -214,12 +214,7 @@ void Safe_WriteLog (const char *const message)
 		if (!*c)
 			return; // end of string
 
-		// ESHQ: зачем?
-		/*if (*c == '\n')
-			fputc ('\r', CompileLog);*/
-
 		fputc (*c, CompileLog);
-
 		c++;
 		}
 	}
@@ -501,12 +496,6 @@ char *GetBanner ()
 void Banner ()
 	{
 	Log (GetBanner ());
-	/*Log ("\n%s " ZHLT_VERSIONSTRING " " HACK_VERSIONSTRING " (%s)\n", g_Program, __DATE__);
-
-	Log ("Zoner's Half-Life Compilation Tools -- Custom Build\n"
-		"Based on code modifications by Sean 'Zoner' Cavanaugh\n"
-		"Based on Valve's version, modified with permission.\n\n"
-		MODIFICATIONS_STRING);*/
 	}
 
 // =====================================================================================

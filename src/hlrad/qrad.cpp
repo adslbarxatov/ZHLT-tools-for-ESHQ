@@ -3042,16 +3042,13 @@ int MakeRAD (const char *Map, unsigned __int8 Mode)
 	FlipSlashes (g_Mapname);
 	StripExtension (g_Mapname);
 	OpenLog (g_clientid);
-	/*atexit (CloseLog);*/
 	ThreadSetDefault ();
 	ThreadSetPriority (g_threadpriority);
 
 	LogStart (0, NULL);
-
 	CheckForErrorLog ();
 
 	dtexdata_init ();
-	/*atexit (dtexdata_free);*/
 	// END INIT
 
 	// BEGIN RAD
