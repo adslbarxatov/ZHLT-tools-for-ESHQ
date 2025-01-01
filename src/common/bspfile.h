@@ -10,7 +10,7 @@
 #define MAX_MAP_HULLS			4
 // hard limit
 
-#define MAX_MAP_MODELS			400
+#define MAX_MAP_MODELS			512		// ESHQ: увеличено (всё ещё вдвое меньше ограничения FWGS)
 // variable, but 400 brush entities is very stressful on the engine and network code as it is
 
 #define MAX_MAP_BRUSHES			32768
