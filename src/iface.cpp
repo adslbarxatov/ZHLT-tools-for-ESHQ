@@ -1,6 +1,6 @@
 #include "iface.h"
 
-// ESHQ: подменная точка входа
+// ESHQ: подменная точка входа 
 #if AS_DLL
 B_API(sint) BuildMapEx (const char *MapPath, uchar Step)
 #else
