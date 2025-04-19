@@ -1,4 +1,4 @@
-# Zoner's Half-Life Tools adaptation
+# Zoner's Half-Life Tools adaptation 
 ### for mods **ESHQ** and **ES: Randomaze**
 
 ### Credits
