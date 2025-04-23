@@ -10,8 +10,8 @@
 
 #define B_API(t)	extern "C" __declspec(dllexport) t
 
-#define B_VERSION			6,1,5,0
-#define B_VERSION_S			"6.1.5.0"
+#define B_VERSION			6,3,0,0
+#define B_VERSION_S			"6.3.0.0"
 #define B_PRODUCT			"ZHLT tools adaptation for ESHQ"
 #define B_COMPANY			FDL_COMPANY
 
