@@ -10,8 +10,8 @@
 
 #define B_API(t)	extern "C" __declspec(dllexport) t
 
-#define B_VERSION			6,3,0,0
-#define B_VERSION_S			"6.3.0.0"
+#define B_VERSION			6,3,3,0
+#define B_VERSION_S			"6.3.3.0"
 #define B_PRODUCT			"ZHLT tools adaptation for ESHQ"
 #define B_COMPANY			FDL_COMPANY
 
@@ -40,6 +40,5 @@ int MakeRAD (const char *map, uchar Mode);
 B_API(sint) BuildMapEx (const char *MapPath, uchar Step);
 #endif
 
-B_API(char *) LibVersionEx ();
 B_API(uint) StepsCountEx ();
 B_API(char *) BannerTextEx ();

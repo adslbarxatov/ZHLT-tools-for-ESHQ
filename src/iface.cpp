@@ -67,10 +67,10 @@ int main (int argc, char **argv)
 		}
 	}
 
-B_API(char *) LibVersionEx ()
+/*B_API(char *) LibVersionEx ()
 	{
 	return B_VERSION_S;
-	}
+	}*/
 
 B_API(uint) StepsCountEx ()
 	{
