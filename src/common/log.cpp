@@ -480,10 +480,10 @@ static void LogArgs (int argc, char **argv)
 // =====================================================================================
 char *GetBanner ()
 	{
-	char banner[MAX_MESSAGE];
+	static char banner[MAX_MESSAGE];
 	banner[0] = '\0';
 
-	sprintf (banner, "\n%s " ZHLT_VERSIONSTRING " " HACK_VERSIONSTRING " (%s)\n", g_Program, __DATE__);
+	/*sprintf (banner, "\n%s " ZHLT_VERSIONSTRING " " HACK_VERSIONSTRING " (%s)\n", g_Program, __DATE__);*/
 
 	sprintf (banner, "Zoner's Half-Life Compilation Tools: custom build\n"
 		"Based on code modifications by Sean 'Zoner' Cavanaugh.\n"
