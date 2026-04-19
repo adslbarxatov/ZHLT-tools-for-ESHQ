@@ -3,16 +3,14 @@
 
 ### Credits
 
-The website lists Zoner, Merl, XP-Cagey and amckern as maintainers. You best check out the
+The website lists Zoner, Merl, XP-Cagey and amckern as maintainers. Check out the
 [ZHLT credit website](http://zhlt.info/credits.html) for more complete information
 
 ### Description
 
-This engine adaptation was created especially for [ESHQ mod](https://moddb.com/mods/eshq)
+This tool adaptation was created especially for [ESHQ mod](https://moddb.com/mods/eshq)
 and [ES: Randomaze mod](https://moddb.com/mods/esrm) for Half-Life part 1.
 It is based on one of the newest versions of [ZHLT](https://github.com/kriswema/zhlt).
-
-Detailed description of the app is available on [its own page](https://adslbarxatov.github.io/ZHLT-tools-for-ESHQ)
 
 ---
 
