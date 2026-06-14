@@ -10,14 +10,14 @@
 #define MAX_MAP_HULLS			4
 // hard limit
 
-#define MAX_MAP_MODELS			512		// ESHQ: увеличено (всё ещё вдвое меньше ограничения FWGS)
+#define MAX_MAP_MODELS			1024		// ESHQ: увеличено (всё ещё вдвое меньше ограничения FWGS)
 // variable, but 400 brush entities is very stressful on the engine and network code as it is
 
 #define MAX_MAP_BRUSHES			32768
 // arbitrary, but large numbers of brushes generally require more lightmap's than the compiler can handle
 
 #define MAX_ENGINE_ENTITIES		(1<<11)		// ESHQ: корректировка в соответствии с Xash3D FWGS
-#define MAX_MAP_ENTITIES		2048
+#define MAX_MAP_ENTITIES		4096		// ESHQ: увеличено в соответствии с Xash3D FWGS (всё ещё меньше в два раза)
 // hard limit, in actuallity it is too much, as temporary entities in the game plus static map entities can overflow
 
 #define MAX_MAP_ENTSTRING		(512*1024)
