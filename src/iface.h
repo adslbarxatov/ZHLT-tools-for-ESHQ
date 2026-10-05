@@ -1,6 +1,6 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 
-// Подключение заголовков 
+// Подключение заголовков
 #include <stdio.h>
 #include <stdlib.h>
 #include <malloc.h>
